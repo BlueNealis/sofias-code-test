@@ -42,7 +42,7 @@ export const VisitSection = ({ section, parallax }) => {
       </div>
       <div className={styles.bottomLeftInfo}>
         <Link href={googleMapLink}>
-          <h1>location</h1>
+          <h1 className={styles.location}>location</h1>
         </Link>
         <h1>{addressLine1}</h1>
         <h1>{addressLine2}</h1>

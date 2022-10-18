@@ -6,6 +6,7 @@
   overflow-y: auto;
   perspective: 10px;
   @include vars.flexbox();
+  @include vars.justify-content(center);
 
   .infoColumn {
     width: vars.$six-twelfths;
@@ -53,9 +54,18 @@
   }
 
   .bottomLeftInfo {
+    @include vars.flexbox();
+    @include vars.flex-direction(column);
+    @include vars.justify-content(center);
+    @include vars.align-items(center);
     background-color: vars.$green;
     min-height: 100vh;
-
+    .location {
+      @include vars.subhead-font();
+      :hover {
+        cursor:pointer;
+      }
+    }
   }
   }
   .imageSideSection {
@@ -64,6 +74,7 @@
       width: vars.$six-twelfths;
       border: 1px solid vars.$black;
       min-height: 100vh;
+      @include vars.flexbox();
       .image {
         width: vars.$five-twelfths;
         border: 1px solid vars.$black;
