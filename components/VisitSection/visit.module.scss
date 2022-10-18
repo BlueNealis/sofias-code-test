@@ -75,13 +75,13 @@
       border: 1px solid vars.$black;
       min-height: 100vh;
       @include vars.flexbox();
+      @include vars.justify-content(center);
+      @include vars.align-items(center);
       .image {
-        width: vars.$five-twelfths;
+        width: calc(vars.$six-twelfths - 30px);
         border: 1px solid vars.$black;
-        height: 50%;
-        span, img, div{
-          min-height: 50vh;
-        }
+        height: calc(100vh - 30px);
+        overflow-y: hidden;
       }
   }
 }
