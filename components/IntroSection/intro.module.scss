@@ -10,8 +10,21 @@
   perspective: 10px;
 }
 
-.subhead {
-  @include vars.subhead-font();
+.title {
+  width: vars.$five-twelfths;
+  text-align: center;
+
+  .head {
+    @include vars.header-font();
+    margin: 0;
+  }
+
+  .subhead {
+    @include vars.subhead-font();
+    font-size: 2rem;
+    margin: 0;
+  }
+
 }
 
 .coinIcon {

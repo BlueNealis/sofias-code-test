@@ -13,9 +13,9 @@ export const IntroSection = ({ section, parallax }) => {
   } = section.fields;
 
   return <section className={styles.introSection}>
-    <div>
-      <h1 className={styles.subhead}>coming soon...</h1>
-      <h1>{headline}</h1>
+    <div className={styles.title}>
+      <h1 className={styles.subhead}>coming soon</h1>
+      <h1 className={styles.head}>{headline}</h1>
     </div>
     <div className={styles.coinIcon}>
       <ImageOrSvg image={parallaxOne}/>
