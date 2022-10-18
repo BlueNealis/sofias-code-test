@@ -35,6 +35,8 @@ export const VisitSection = ({ section, parallax }) => {
         </div>
         <div className={styles.pizzaIcon}>
           <ImageOrSvg image={parallaxIconOne}/>
+        </div>
+        <div className={styles.hourIcon}>
           <ImageOrSvg image={parallaxIconTwo}/>
         </div>
       </div>

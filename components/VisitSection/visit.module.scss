@@ -3,9 +3,12 @@
 .visitSection {
   position: relative;
   height: 100vh;
+  overflow-y: auto;
+  perspective: 10px;
   @include vars.flexbox();
 
   .infoColumn {
+    position: relative;
     width: vars.$six-twelfths;
     @include vars.flexbox();
     @include vars.flex-direction(column);
@@ -21,6 +24,11 @@
       .hoursSection {
         h1 {
           margin: 0;
+          @include vars.body-font();
+          @include vars.subhead-font-size();
+        }
+        .hoursInfo {
+          @include vars.body-font();
         }
         .hoursHeadline {
           @include vars.subhead-font();
@@ -28,10 +36,25 @@
           margin:0;
         }
       }
+      .pizzaIcon {
+        position: relative;
+        width: vars.$one-twelfth;
+        right: 20%;
+        transform-style: preserve-3d;
+        transform: translateZ(-7px) scale(1);
+      }
+      .hourIcon {
+        position: relative;
+        width: vars.$one-twelfth;
+        left: 20%;
+        transform-style: preserve-3d;
+        transform: translateZ(-3px) scale(1);
+      }
   }
 
   .bottomLeftInfo {
     background-color: vars.$green;
+    min-height: 100vh;
   }
   }
   .imageSideSection {
