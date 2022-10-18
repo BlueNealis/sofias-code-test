@@ -5,7 +5,7 @@
   @include vars.flexbox();
   @include vars.flex-direction(column);
   @include vars.align-items(center);
-  width: 100vw;
+  height: 100vh;
   overflow-y: auto;
   perspective: 10px;
 }
@@ -16,9 +16,11 @@
 
 .coinIcon {
   width: vars.$one-twelfth;
-  position: absolute;
-  left: 15%;
-  top: 15%;
+  position: relative;
+  right: 50%;
+  bottom: 10vw;
+  transform-style: preserve-3d;
+  transform: translateZ(-5px) scale(1.5);
 }
 
 .mainImageSection {
