@@ -1,4 +1,15 @@
 @use "../../styles/vars";
 
 .visitSection {
+  height: 100vh;
+  @include vars.flexbox();
+  .topLeftInfo {
+    background-color: vars.$pink;
+  }
+  .bottomLeftInfo {
+    background-color: vars.$green;
+  }
+  .imageSideSection {
+      width: 50vw;
+  }
 }

@@ -23,31 +23,33 @@ export const VisitSection = ({ section, parallax }) => {
   console.log('map', mapLocation, 'link', googleMapLink)
 
   return <section id={menuTitle} className={styles.visitSection}>
-    <div className={styles.topLeftInfo}>
-      <div className={styles.hoursSection}>
-        <h1>{hoursHeadline}</h1>
-        <h1>{hoursGroups[0].fields.title}</h1>
-        <div className={styles.hoursInfo}>
-          <h1>{`${hoursGroups[0].fields.hours[0].fields.startDay} - ${hoursGroups[0].fields.hours[0].fields.endDay}`}</h1>
-          <h1>{`${hoursGroups[0].fields.hours[0].fields.startTime} - ${hoursGroups[0].fields.hours[0].fields.endTime}`}</h1>
+  <div className={styles.infoColumn}>
+      <div className={styles.topLeftInfo}>
+        <div className={styles.hoursSection}>
+          <h1>{hoursHeadline}</h1>
+          <h1>{hoursGroups[0].fields.title}</h1>
+          <div className={styles.hoursInfo}>
+            <h1>{`${hoursGroups[0].fields.hours[0].fields.startDay} - ${hoursGroups[0].fields.hours[0].fields.endDay}`}</h1>
+            <h1>{`${hoursGroups[0].fields.hours[0].fields.startTime} - ${hoursGroups[0].fields.hours[0].fields.endTime}`}</h1>
+          </div>
+        </div>
+        <div className={styles.pizzaIcon}>
+          <ImageOrSvg image={parallaxIconOne}/>
+          <ImageOrSvg image={parallaxIconTwo}/>
         </div>
       </div>
-      <div className={styles.pizzaIcon}>
-        <ImageOrSvg image={parallaxIconOne}/>
-        <ImageOrSvg image={parallaxIconTwo}/>
+      <div className={styles.bottomLeftInfo}>
+        <Link href={googleMapLink}>
+          <h1>location</h1>
+        </Link>
+        <h1>{addressLine1}</h1>
+        <h1>{addressLine2}</h1>
+        <h1>{`${city}, ${zip}, ${stateAbbreviation}`}</h1>
+        <div className={styles.mapContainer}>
+        </div>
       </div>
     </div>
-    <div className={styles.bottomLeftInfo}>
-      <Link href={googleMapLink}>
-        <h1>location</h1>
-      </Link>
-      <h1>{addressLine1}</h1>
-      <h1>{addressLine2}</h1>
-      <h1>{`${city}, ${zip}, ${stateAbbreviation}`}</h1>
-      <div className={styles.mapContainer}>
-      </div>
-    </div>
-    <div className='imageSideSection'>
+    <div className={styles.imageSideSection}>
       <ImageOrSvg image={sectionImage}/>
     </div>
   </section>;
