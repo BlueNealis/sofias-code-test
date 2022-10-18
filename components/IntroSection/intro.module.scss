@@ -28,11 +28,11 @@
       border-radius: 50% 50%;
     }
   }
-  
+
   .mainLogo {
     position: absolute;
     width: vars.$one-twelfth;
-    span {
-    }
+    bottom: 20vh;
+    left: 26%;
   }
 }
