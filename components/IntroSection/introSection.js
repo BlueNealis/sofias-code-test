@@ -20,8 +20,10 @@ export const IntroSection = ({ section, parallax }) => {
     <div className={styles.mainImageSection}>
     <div className={styles.mainImage}>
       <ImageOrSvg image={mainImage}/>
-    </div> 
+    </div>
+    <div className={styles.mainLogo}>
       <ImageOrSvg image={mainImageIcon}/>
+    </div>
     </div>
     <ImageOrSvg image={parallaxOne}/>
     <ImageOrSvg image={parallaxTwo}/>

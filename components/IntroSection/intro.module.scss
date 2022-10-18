@@ -21,14 +21,18 @@
   .mainImage {
     width: vars.$three-twelfths;
     border: 1px solid vars.$black;
-    height: 70vh;
+    height: calc(70vh + 2px);
     border-radius: 50% 50%;
     span {
       min-height: 70vh;
       border-radius: 50% 50%;
     }
   }
-  .mainImageLogo {
-    
+  
+  .mainLogo {
+    position: absolute;
+    width: vars.$one-twelfth;
+    span {
+    }
   }
 }
