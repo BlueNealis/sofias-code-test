@@ -67,3 +67,12 @@
     left: 26%;
   }
 }
+
+.pillarIcon {
+  position: relative;
+  bottom: 30%;
+  left: 45%;
+  width: calc(vars.$one-twelfth - 2vw);
+  transform-style: preserve-3d;
+  transform: translateZ(-5px) scale(1.5);
+}
