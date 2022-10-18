@@ -8,11 +8,16 @@
   @include vars.flexbox();
 
   .infoColumn {
-    position: relative;
     width: vars.$six-twelfths;
     @include vars.flexbox();
     @include vars.flex-direction(column);
     text-align: center;
+    h1 {
+      margin: 0;
+      @include vars.body-font();
+      @include vars.subhead-font-size();
+    }
+
     .topLeftInfo {
       position: relative;
       background-color: vars.$pink;
@@ -22,11 +27,6 @@
       @include vars.justify-content(center);
       @include vars.align-items(center);
       .hoursSection {
-        h1 {
-          margin: 0;
-          @include vars.body-font();
-          @include vars.subhead-font-size();
-        }
         .hoursInfo {
           @include vars.body-font();
         }
@@ -55,6 +55,7 @@
   .bottomLeftInfo {
     background-color: vars.$green;
     min-height: 100vh;
+
   }
   }
   .imageSideSection {
@@ -62,6 +63,7 @@
     top: 0;
       width: vars.$six-twelfths;
       border: 1px solid vars.$black;
+      min-height: 100vh;
       .image {
         width: vars.$five-twelfths;
         border: 1px solid vars.$black;
