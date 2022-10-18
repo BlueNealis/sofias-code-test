@@ -4,28 +4,35 @@
   position: relative;
   height: 100vh;
   @include vars.flexbox();
-  .topLeftInfo {
-    background-color: vars.$pink;
-  }
-  .bottomLeftInfo {
-    background-color: vars.$green;
-  }
+
   .infoColumn {
     width: vars.$six-twelfths;
     @include vars.flexbox();
     @include vars.flex-direction(column);
     text-align: center;
-    .hoursSection {
-        @include vars.flexbox();
-        @include vars.flex-direction(column);
-        @include vars.justify-content(center);
-        @include vars.align-items(center);
-      .hoursHeadline {
-        @include vars.subhead-font();
-        font-size: 1.2rem;
-        margin:0;
+    .topLeftInfo {
+      position: relative;
+      background-color: vars.$pink;
+      min-height: 100vh;
+      @include vars.flexbox();
+      @include vars.flex-direction(column);
+      @include vars.justify-content(center);
+      @include vars.align-items(center);
+      .hoursSection {
+        h1 {
+          margin: 0;
+        }
+        .hoursHeadline {
+          @include vars.subhead-font();
+          font-size: 1.2rem;
+          margin:0;
+        }
       }
-    }
+  }
+
+  .bottomLeftInfo {
+    background-color: vars.$green;
+  }
   }
   .imageSideSection {
     position: sticky;
