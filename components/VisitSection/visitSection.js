@@ -26,7 +26,7 @@ export const VisitSection = ({ section, parallax }) => {
   <div className={styles.infoColumn}>
       <div className={styles.topLeftInfo}>
         <div className={styles.hoursSection}>
-          <h1>{hoursHeadline}</h1>
+          <h1 className={styles.hoursHeadline}>{hoursHeadline}</h1>
           <h1>{hoursGroups[0].fields.title}</h1>
           <div className={styles.hoursInfo}>
             <h1>{`${hoursGroups[0].fields.hours[0].fields.startDay} - ${hoursGroups[0].fields.hours[0].fields.endDay}`}</h1>
@@ -50,7 +50,9 @@ export const VisitSection = ({ section, parallax }) => {
       </div>
     </div>
     <div className={styles.imageSideSection}>
-      <ImageOrSvg image={sectionImage}/>
+      <div className={styles.image}>
+        <ImageOrSvg image={sectionImage}/>
+      </div>
     </div>
   </section>;
 };

@@ -9,7 +9,33 @@
   .bottomLeftInfo {
     background-color: vars.$green;
   }
+  .infoColumn {
+    width: vars.$six-twelfths;
+    @include vars.flexbox();
+    @include vars.flex-direction(column);
+    text-align: center;
+    .hoursSection {
+        @include vars.flexbox();
+        @include vars.flex-direction(column);
+        @include vars.justify-content(center);
+        @include vars.align-items(center);
+      .hoursHeadline {
+        @include vars.subhead-font();
+        font-size: 1.2rem;
+        margin:0;
+      }
+    }
+  }
   .imageSideSection {
-      width: 50vw;
+      width: vars.$six-twelfths;
+      border: 1px solid vars.$black;
+      .image {
+        width: vars.$five-twelfths;
+        border: 1px solid vars.$black;
+        height: 50%;
+        span, img, div{
+          min-height: 50vh;
+        }
+      }
   }
 }
