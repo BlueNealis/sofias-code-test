@@ -12,5 +12,6 @@ export const IntroSection = ({ section, parallax }) => {
     parallaxTwo,
   } = section.fields;
 
+
   return <section className={styles.introSection}></section>;
 };
