@@ -1,4 +1,9 @@
 @use "../../styles/vars";
 
 .introSection {
+  @include vars.flexbox();
+  @include vars.flex-direction(column);
+  width: 100vw;
+  overflow-y: auto;
+  perspective: 10px; 
 }
