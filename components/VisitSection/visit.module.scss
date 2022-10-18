@@ -1,6 +1,7 @@
 @use "../../styles/vars";
 
 .visitSection {
+  position: relative;
   height: 100vh;
   @include vars.flexbox();
   .topLeftInfo {
@@ -27,6 +28,8 @@
     }
   }
   .imageSideSection {
+    position: sticky;
+    top: 0;
       width: vars.$six-twelfths;
       border: 1px solid vars.$black;
       .image {
