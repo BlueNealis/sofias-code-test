@@ -41,6 +41,7 @@
   @include vars.flexbox();
   @include vars.justify-content(center);
   position: relative;
+  margin-top: -10vh;
   .imageOuterBorder {
     border: 1px solid vars.$black;
     width: calc(vars.$three-twelfths + 30px);
