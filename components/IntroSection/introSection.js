@@ -18,7 +18,9 @@ export const IntroSection = ({ section, parallax }) => {
       <h1>{headline}</h1>
     </div>
     <div className={styles.mainImageSection}>
+    <div className={styles.mainImage}>
       <ImageOrSvg image={mainImage}/>
+    </div> 
       <ImageOrSvg image={mainImageIcon}/>
     </div>
     <ImageOrSvg image={parallaxOne}/>
