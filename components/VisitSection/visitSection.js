@@ -1,4 +1,5 @@
 import styles from "./visit.module.scss";
+import Link from "next/link"
 import { ImageOrSvg } from "../ImageorSvg/imageOrSvg";
 import GoogleMap from "../Location/Map";
 
@@ -19,7 +20,7 @@ export const VisitSection = ({ section, parallax }) => {
     mapLocation,
   } = section.fields;
 
-  console.log('head',hoursHeadline, 'group', hoursGroups)
+  console.log('map', mapLocation, 'link', googleMapLink)
 
   return <section id={menuTitle} className={styles.visitSection}>
     <div className={styles.topLeftInfo}>
@@ -37,8 +38,16 @@ export const VisitSection = ({ section, parallax }) => {
       </div>
     </div>
     <div className={styles.bottomLeftInfo}>
+      <Link href={googleMapLink}>
+        <h1>location</h1>
+      </Link>
+      <h1>{addressLine1}</h1>
+      <h1>{addressLine2}</h1>
+      <h1>{`${city}, ${zip}, ${stateAbbreviation}`}</h1>
+      <div className={styles.mapContainer}>
+      </div>
     </div>
-    <div>
+    <div className='imageSideSection'>
       <ImageOrSvg image={sectionImage}/>
     </div>
   </section>;
