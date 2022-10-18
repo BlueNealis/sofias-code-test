@@ -26,13 +26,20 @@ export const VisitSection = ({ section, parallax }) => {
       <div className={styles.hoursSection}>
         <h1>{hoursHeadline}</h1>
         <h1>{hoursGroups[0].fields.title}</h1>
-        <h1>{`${hoursGroups[0].fields.hours[0].fields.startDay} - ${hoursGroups[0].fields.hours[0].fields.endDay}`}</h1>
-        <h1>{`${hoursGroups[0].fields.hours[0].fields.startTime} - ${hoursGroups[0].fields.hours[0].fields.endTime}`}</h1>
+        <div className={styles.hoursInfo}>
+          <h1>{`${hoursGroups[0].fields.hours[0].fields.startDay} - ${hoursGroups[0].fields.hours[0].fields.endDay}`}</h1>
+          <h1>{`${hoursGroups[0].fields.hours[0].fields.startTime} - ${hoursGroups[0].fields.hours[0].fields.endTime}`}</h1>
+        </div>
       </div>
       <div className={styles.pizzaIcon}>
         <ImageOrSvg image={parallaxIconOne}/>
         <ImageOrSvg image={parallaxIconTwo}/>
       </div>
+    </div>
+    <div className={styles.bottomLeftInfo}>
+    </div>
+    <div>
+      <ImageOrSvg image={sectionImage}/>
     </div>
   </section>;
 };
