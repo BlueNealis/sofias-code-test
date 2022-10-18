@@ -3,7 +3,12 @@
 .introSection {
   @include vars.flexbox();
   @include vars.flex-direction(column);
+  @include vars.align-items(center);
   width: 100vw;
   overflow-y: auto;
-  perspective: 10px; 
+  perspective: 10px;
+}
+
+.subhead {
+  @include vars.subhead-font();
 }

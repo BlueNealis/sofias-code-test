@@ -14,10 +14,10 @@ export const IntroSection = ({ section, parallax }) => {
 
   return <section className={styles.introSection}>
     <div>
-      <h1>{headline}</h1>
       <h1 className={styles.subhead}>coming soon...</h1>
+      <h1>{headline}</h1>
     </div>
-    <div className='mainImageSection'>
+    <div className={styles.mainImageSection}>
       <ImageOrSvg image={mainImage}/>
       <ImageOrSvg image={mainImageIcon}/>
     </div>
