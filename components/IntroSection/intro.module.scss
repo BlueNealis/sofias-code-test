@@ -1,6 +1,7 @@
 @use "../../styles/vars";
 
 .introSection {
+  position: relative;
   @include vars.flexbox();
   @include vars.flex-direction(column);
   @include vars.align-items(center);
@@ -11,6 +12,13 @@
 
 .subhead {
   @include vars.subhead-font();
+}
+
+.coinIcon {
+  width: vars.$one-twelfth;
+  position: absolute;
+  left: 15%;
+  top: 15%;
 }
 
 .mainImageSection {

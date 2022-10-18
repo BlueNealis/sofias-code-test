@@ -17,6 +17,9 @@ export const IntroSection = ({ section, parallax }) => {
       <h1 className={styles.subhead}>coming soon...</h1>
       <h1>{headline}</h1>
     </div>
+    <div className={styles.coinIcon}>
+      <ImageOrSvg image={parallaxOne}/>
+    </div>
     <div className={styles.mainImageSection}>
       <div className={styles.imageOuterBorder}>
         <div className={styles.mainImage}>
@@ -27,7 +30,6 @@ export const IntroSection = ({ section, parallax }) => {
         <ImageOrSvg image={mainImageIcon}/>
       </div>
     </div>
-    <ImageOrSvg image={parallaxOne}/>
     <ImageOrSvg image={parallaxTwo}/>
   </section>;
 };
